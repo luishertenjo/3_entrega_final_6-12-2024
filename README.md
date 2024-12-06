@@ -29,7 +29,7 @@ Este proyecto es un gestor de tareas simple creado con HTML, CSS y JavaScript. P
 
 ## Agradecimientos
 
-Quiero expresar mi más sincero agradecimiento al profesor **Alexander Castañeda** por el curso dictado y por su invaluable guía y apoyo. Este proyecto es la entrega del último taller del curso de JavaScript.
+Quiero expresar mi más sincero agradecimiento al profesor **Alexander Castañeda** por el curso dictado y por su invaluable guía y apoyo. Este proyecto es la entrega del último taller del curso de FrontEnd - (JavaScript).
 
 ## Licencia
 
