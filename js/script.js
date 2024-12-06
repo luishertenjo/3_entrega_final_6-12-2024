@@ -7,6 +7,8 @@ const taskInput = document.getElementById('taskInput');
 const addTaskButton = document.querySelector('#addTaskButton');
 // variable almacena equiqueta li de DOM
 const taskList = document.querySelector('#taskList');
+// variable almacena segundo UL para generar lsita de tareas ok
+const taskDone = document.querySelector('#taskDone')
 
 // Funcion de agegar tarea con boton y cheklist
 function addTask() {
@@ -34,7 +36,7 @@ function addTask() {
 
     // crear el boton de cheklist
     const checkButton = document.createElement('button'); // crea elemento button
-    checkButton.textContent = '✅'; // texto en el boton
+    checkButton.textContent = '☑️'; // texto en el boton
      
     // crear funcion con activacion clic del boton check
     checkButton.onclick = function() {
@@ -42,16 +44,18 @@ function addTask() {
          if (taskItem.style.textDecoration === 'line-through') {
             //condicional si la tarea ya fue completada 
              taskItem.style.textDecoration = 'none';
-             checkButton.textContent = '✅'; // cambiar contenido activa
-
+             checkButton.textContent = '☑️'; // cambiar contenido activa
+             taskList.appendChild(taskItem); // uso nodo hijo taskTem para retornar
              } else {
                 // si la tarea y se cumplio
                  taskItem.style.textDecoration = 'line-through';
-                 checkButton.textContent = '☑️'; // cambiar contenido finalizada
+                 checkButton.textContent = '✅'; // cambiar contenido finalizada
+                 taskDone.appendChild(taskItem); // hijo tasItem pasar a TaskDone Nueva lista
                  }
     };
 
-   
+
+       
     // añadir la tarea a lista
     taskList.appendChild(taskItem); // funcion para añadir nodo hijo (li a ul)
    
